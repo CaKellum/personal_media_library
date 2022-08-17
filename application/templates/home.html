@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<nav><a href="{{ url_for('add') }}" class="nav-link">Add item</a></nav>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                <th>Title</th>
+                </td>
+                <td>
+                <th>Format</th>
+                </td>
+            </tr>
+            {% for media in media_list %}
+            <tr>
+                <td>{{ media.title }}</td>
+                <td>{{ media.format }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

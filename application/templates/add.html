@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<nav><a href="{{ url_for('index') }}" class="nav-link"> return home </a></nav>
+<form action="{{ url_for('add') }}" method="POST">
+    <label for="title">title:</label>
+    <input type="text" name="title" id="title" value="{{ request.form['title'] }}"><br><br>
+    <label for="format">formats:</label>
+    <select name="format" id="format" value="{{ request.form['format'] }}">
+        {% for format in format_list %}
+        <option value="{{ format.id }}"> {{ format.name }} </option>
+        {% endfor %}
+    </select><br><br>
+    <label for="run_time">What is the runtime in minutes</label>
+    <input type="number" name="run_time" id="run_time" value="{{ request.form['run_time'] }}"><br><br>
+    <label for="shared_disc">Does the movie share a disc?</label>
+    <input type="checkbox" name="shared_disc" id="shared_disc" value="{{ request.form['shared_disc'] }}"><br><br>
+    <button>Submit</button>
+</form>
+{% endblock %}

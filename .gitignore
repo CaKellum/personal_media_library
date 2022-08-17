@@ -1,8 +1,8 @@
-./__pycache__
-./__pycache__/*
-./*.db
-./*.sh
-./app_env
-./app_env/*
-./application/__pycache__
-./application/__pycache__/*
+__pycache__
+__pycache__/*
+app_env
+app_env/*
+application/__pycache__
+application/__pycache__/*
+*.db
+*.sh
