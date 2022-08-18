@@ -6,3 +6,5 @@ application/__pycache__
 application/__pycache__/*
 *.db
 *.sh
+.vscode/
+.vscode/*
